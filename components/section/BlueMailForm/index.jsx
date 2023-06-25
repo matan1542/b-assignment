@@ -46,6 +46,7 @@ const BlueMailForm = ({ setAlert }) => {
       password,
       serverAddress,
       serverPath,
+      sslEnabled,
       port,
     };
     setAlert(payload);
