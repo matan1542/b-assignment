@@ -39,16 +39,26 @@ const BlueMailForm = ({ setAlert }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    let payload = {};
+    if (accountType === 'Advanced') {
+      payload = {
+        accountType,
+        username,
+        password,
+        serverAddress,
+        serverPath,
+        sslEnabled,
+        port,
+      };
+    } else {
+        payload = {
+            accountType,
+            username,
+            password,
+            serverAddress
+          };
+    }
 
-    const payload = {
-      accountType,
-      username,
-      password,
-      serverAddress,
-      serverPath,
-      sslEnabled,
-      port,
-    };
     setAlert(payload);
   };
   return (

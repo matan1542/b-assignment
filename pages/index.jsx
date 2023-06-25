@@ -15,19 +15,28 @@ const Home = () => {
     setPayload(payload);
   };
 
-  const onClose = () => {
-    setIsOpen(false);
+  const onCloseOutSideClick = (ev) => {
+   if (ev?.target.classList.contains('modal-overlay')) {
+      setIsOpen(false);
+    }
   };
+
+  const onClose = ()=>{
+    setIsOpen(false);
+  }
 
   return (
     <>
       <main className={style['page-form-container']}>
         <BlueMailForm setAlert={setAlert} />
         {isOpen && (
-          <div className={style['modal-page-container']}>
+          <div
+            className={`${style['modal-page-container']} modal-overlay`}
+            onClick={onCloseOutSideClick}
+          >
             <ModalAlert onClose={onClose}>
               <div className={style['json-res-container']}>
-              {syntaxHighlight(JSON.stringify(payload, null, '\t'))}
+                {syntaxHighlight(JSON.stringify(payload, null, '\t'))}
               </div>
             </ModalAlert>
           </div>

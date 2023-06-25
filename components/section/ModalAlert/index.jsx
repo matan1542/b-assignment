@@ -15,10 +15,10 @@ const ModalAlert = ({ children, onClose, classname }) => {
     return () => {
       document.removeEventListener('mousedown', handleOutsideClick);
     };
-  }, []);
+  }, [onClose]);
 
   return (
-    <div className={`${style['modal-container']} ${classname} modal-overlay`}>
+    <div className={`${style['modal-container']} ${classname}`}>
       <button className={style['close-btn']} onClick={onClose}>
         <img src='static/media/close.svg' alt='close modal' />
       </button>
