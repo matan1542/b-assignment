@@ -10,7 +10,7 @@ const Header = () => {
           <button
             type='button'
           >
-            <a title='Your logo' className={style.logo}>
+            <a title='Company logo' className={style.logo}>
               <img
                 src='static/images/logos/logo.svg'
                 alt='Company logo'
