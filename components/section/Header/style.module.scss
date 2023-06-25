@@ -1,0 +1,23 @@
+.header {
+    padding: 10px 12px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    background-color: #122840;
+    border-radius: 0px 0px 12px 12px;
+
+    .btnContainer {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .logo {
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 2rem;
+
+        img {
+            width: 140px;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+.string { color: rgb(102, 153, 0); }
+.number { color: darkorange; }
+.boolean { color: blue; }
+.null { color: magenta; }
+.key { color: rgb(153, 0, 85);; }
+.line-number{
+    pointer-events: none;
+    user-select: none;
+}

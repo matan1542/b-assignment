@@ -1,0 +1,30 @@
+.navigation {
+    font-family: "NunitoSans-Regular";
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+.btnsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    >:not(:last-child) {
+        margin-right: 60px;
+    }
+}
+
+.navBtn {
+    font-family: "NunitoSans-Regular";
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.navBtn:hover:not(.navBtn.active) {
+    color: #00c6bb;
+}
+
+.navBtn.active {
+    color: #00c6bb;
+}
